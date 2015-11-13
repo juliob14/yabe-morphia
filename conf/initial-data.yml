@@ -1,0 +1,88 @@
+# Test data
+
+User(timo):
+    email:          timo.slack@gmail.com
+    password:       secret
+    fullname:       Timo
+    isAdmin:        true
+    
+User(carla):
+    email:          carla@gmail.com
+    password:       secret
+    fullname:       Carla    
+    
+User(roger):
+    email:          roger@gmail.com
+    password:       secret
+    fullname:       Roger    
+    
+Tag(local):
+    name:           local
+    
+Tag(architecture):
+    name:           Architecture
+    
+Tag(test):
+    name:           Test
+    
+Tag(mvc):
+    name:           MVC    
+    
+Post(firstTimoPost):
+    title:          About the model layer
+    postedAt:       2011-06-14
+    author:         timo
+    tags:           
+                    - local
+                    - architecture
+    content:        >
+                    The model has a central position in any web application application. It is the domain-specific 
+                    representation of the information on which the application operates.
+                     
+                    Martin fowler defines it as :
+                        
+                    Responsible for representing concepts of the business, information about the 
+                    business situation, and business rules. State that reflects the business situation 
+                    is controlled and used here, even though the technical details of storing it are 
+                    delegated to the infrastructure. This layer is the heart of business software.
+
+Post(secondTimoPost):
+    title:          Just a test
+    postedAt:       2012-03-25
+    author:         timo
+    tags:           
+                    - test
+    content:        >
+                    Well, it's just a test.
+                    
+Post(carlaPost):
+    title:          Al fondo hay sitio
+    postedAt:       2012-06-06
+    author:         carla
+    tags:           
+                    - local
+    content:        >
+                    Esta es una novela epica que cuenta la historia de una familia peruana postmodernista.  
+                     
+                    Encuentra la catarsis de su historia en la constante batalla del rico contra el pobre, la sintesis de la sociedad actual. Me encanta la novela, y Betty la fea, y Pedro el escamoso tambien...
+                    
+Comment(c1):
+    author:         Roger
+    content:        >
+                    Yo soy Roger...
+    postedAt:       2012-06-14
+    post:           firstTimoPost
+    
+Comment(c2):
+    author:         Yenny
+    content:        >
+                    Ya lo sabia ...
+    postedAt:       2012-06-15
+    post:           firstTimoPost    
+    
+Comment(c3):
+    author:         Marines
+    content:        >
+                    Es esto util ?
+    postedAt:       2012-04-05
+    post:           secondTimoPost    
